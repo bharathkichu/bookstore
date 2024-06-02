@@ -5,14 +5,14 @@ const router = express.Router();
 // Route for saving book to database
 router.post("/",async(req,res)=>{
     try {
-      if(!req.body.title || !req.body.auther || !req.body.publishYear){
+      if(!req.body.title || !req.body.author || !req.body.publishYear){
         res.status(400).send({
           message:"send all required fields : title, auther, publishYear"
         });
       }else{
         const newBook = {
           title:req.body.title,
-          auther:req.body.auther,
+          author:req.body.author,
           publishYear:req.body.publishYear
         };
         console.log(newBook);

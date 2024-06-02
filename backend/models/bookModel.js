@@ -6,7 +6,7 @@ const bookschema = mongoose.Schema(
             type:String,
             required:true,
         },
-        authe77777r:{
+        author:{
             type:String,
             required:true,
         },
