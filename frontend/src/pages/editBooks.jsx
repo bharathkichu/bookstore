@@ -15,7 +15,7 @@ const editBooks = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`https://bookstore-spr4.onrender.com/books/${id}`)
       .then((response) => {
         const { author, publishYear, title } = response.data;
         setAuthor(author);
@@ -32,7 +32,7 @@ const editBooks = () => {
   const handleEditBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
-    axios.put(`http://localhost:5555/books/${id}`, data)
+    axios.put(`https://bookstore-spr4.onrender.com/books/${id}`, data)
       .then(() => navigate("/"))
       .catch((error) => {
         console.error("Error editing book:", error);
